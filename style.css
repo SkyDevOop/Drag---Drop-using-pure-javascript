@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #928cff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.addTask {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #FFF;
+  padding: 1.7rem;
+  width: 275px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.addTask .box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 10px;
+}
+
+.addTask .box #input_task {
+  padding: 0.5rem;
+  font-size: 20px;
+  outline: 0;
+  border: 1px solid #928cff;
+  transition: .7s;
+}
+.addTask .box #input_task:focus{
+  border: 1px solid #00aa39;
+}
+.addTask .box #input_task:focus::placeholder {
+  transition: 0.7s;
+  opacity:0;
+}
+
+.addTask .box #btn_task {
+  color: #fff;
+  background-color: #928cff;
+  outline: 0;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.7s;
+}
+
+.addTask .box #btn_task:hover {
+  background-color: #00aa39;
+
+}
+
+/*  */
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  align-items: flex-start;
+  gap: 60px 20px;
+  padding: 0;
+}
+
+
+.list .box {
+  background-color: #FFF;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.4) 0px 50px 100px -20px, rgba(0, 0, 0, 0.5) 0px 30px 60px -30px;
+}
+
+.list .box .item{
+  background-color: #928cff;
+  color: #FFF;
+  padding: 10px;
+  cursor: move;
+}
+.list .box .item:not(:last-child) {
+  margin-bottom: 10px;
+}
